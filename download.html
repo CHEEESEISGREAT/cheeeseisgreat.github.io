@@ -56,3 +56,80 @@
         .subtitle {
             font-size: 18px;
             color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Direct Download Button */
+        .direct-download-btn {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            padding: 14px 28px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            transition: background-color 0.2s;
+        }
+
+        .direct-download-btn:hover {
+            background-color: #004c99;
+        }
+
+        /* Instructions Styling */
+        .instructions-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 0;
+            color: #cc0000;
+        }
+
+        ol {
+            padding-left: 20px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .bold-step {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="navbar-logo" href="index.html">Tobobs</a>
+        <div class="navbar-actions">
+            <a href="https://www.youtube.com/channel/UC_kikknTWzwpXqa2keaiBtw" target="_blank">YouTube</a>
+        </div>
+    </nav>
+
+    <div class="page">
+        <h1>Get Tobobs Launcher</h1>
+        <p class="subtitle">Download the package to start playing custom games.</p>
+        
+        <a href="tobobs.zip" download class="direct-download-btn">
+            Click to Download (.ZIP)
+        </a>
+
+        <div class="instructions-box">
+            <h2>⚠️ Running the Launcher</h2>
+            <p>Because Tobobs is an independent custom engine, Windows SmartScreen or your browser might flag it as unrecognized. Follow these steps to open it:</p>
+            <ol>
+                <li>Extract the downloaded <span class="bold-step">tobobs.zip</span> folder.</li>
+                <li>Double-click your launcher executable inside the folder.</li>
+                <li>If a Windows SmartScreen popup appears, click <span class="bold-step">"More Info"</span>.</li>
+                <li>Click the <span class="bold-step">"Run Anyway"</span> button that appears at the bottom.</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>
