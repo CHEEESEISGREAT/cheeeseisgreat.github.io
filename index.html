@@ -31,15 +31,39 @@
             text-decoration: none;
         }
 
-        .navbar-actions a {
+        /* Right side layout alignment */
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-actions .yt-link {
             color: #0066cc;
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
         }
 
-        .navbar-actions a:hover {
+        .navbar-actions .yt-link:hover {
             text-decoration: underline;
+        }
+
+        /* Top Right Download Button */
+        .download-btn {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-left: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .download-btn:hover {
+            background-color: #004c99;
         }
 
         /* Main Content */
@@ -70,7 +94,9 @@
     <nav class="navbar">
         <a class="navbar-logo" href="#">Tobobs</a>
         <div class="navbar-actions">
-            <a href="https://www.youtube.com/channel/UC_kikknTWzwpXqa2keaiBtw" target="_blank">YouTube</a>
+            <a href="https://www.youtube.com/channel/UC_kikknTWzwpXqa2keaiBtw" target="_blank" class="yt-link">YouTube</a>
+            
+            <a href="download.html" class="download-btn">Download</a>
         </div>
     </nav>
 
