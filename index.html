@@ -2,129 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="tobobs.ico">
-    <title>Tobobs - Play Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobobs Engine Web Portal</title>
     <style>
-        * {
-            box-sizing: border-box;
+        body {
             margin: 0;
             padding: 0;
-        }
-        body {
-            color: black;
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            height: 100vh;
+            background-color: #121417;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f0f3f6;
             display: flex;
             flex-direction: column;
-        }
-        .navbar {
-            background: #ffffff;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            width: 100%;
-        }
-        .navbar-logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-            text-decoration: none;
-        }
-        .navbar-actions a {
-            color: #0066cc;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .navbar-actions a:hover {
-            text-decoration: underline;
-        }
-        .main-container {
-            flex: 1;
-            display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            height: 100vh;
         }
-        .game-square-card {
-            background: #ffffff;
-            width: 100%;
-            max-width: 400px;
-            border: 1px solid #eaeaea;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-            padding: 30px;
+
+        .container {
             text-align: center;
+            background: #1a1d24;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            border: 1px solid #2d333f;
+            max-width: 450px;
+            width: 100%;
         }
-        .game-art-placeholder {
-            width: 120px;
-            height: 120px;
-            background-color: #f0f2f5;
-            border: 2px solid #e0e0e0;
-            border-radius: 16px;
-            margin: 0 auto 24px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            letter-spacing: 1px;
         }
-        .game-art-placeholder span {
-            font-size: 36px;
-        }
-        .game-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #111111;
-            margin-bottom: 8px;
-        }
-        .game-description {
-            font-size: 14px;
-            color: #666666;
-            margin-bottom: 28px;
+
+        p {
+            color: #9ba4b4;
+            margin-bottom: 30px;
+            font-size: 1rem;
             line-height: 1.5;
         }
-        .launch-btn {
-            display: block;
-            background-color: #0066cc;
-            color: white;
-            padding: 14px;
-            font-size: 16px;
-            font-weight: bold;
+
+        .play-btn {
+            display: inline-block;
+            background-color: #ff5722;
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 6px;
-            transition: background-color 0.2s, transform 0.1s;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
         }
-        .launch-btn:hover {
-            background-color: #004c99;
+
+        .play-btn:hover {
+            background-color: #f4511e;
+            transform: translateY(-2px);
         }
-        .launch-btn:active {
-            transform: scale(0.98);
+
+        .play-btn:active {
+            transform: translateY(0);
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            font-size: 0.8rem;
+            color: #525a66;
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <a class="navbar-logo" href="index.html">Tobobs</a>
-        <div class="navbar-actions">
-            <a href="https://www.youtube.com/channel/UC_kikknTWzwpXqa2keaiBtw" target="_blank">YouTube</a>
-        </div>
-    </nav>
-
-    <div class="main-container">
-        <div class="game-square-card">
-            <div class="game-art-placeholder">
-                <span>🧱</span>
-            </div>
-            <h2 class="game-title">Core Obby</h2>
-            <p class="game-description">
-                Launch directly into the live instance. The HTML frontend dictates exactly which resource file is pulled.
-            </p>
-            <a href="tobobs-engine://map=obby.json" class="launch-btn">
-                Launch Obby Instance
-            </a>
+    <div class="container">
+        <h1>TOBOBS ENGINE</h1>
+        <p>Launch your custom 3D sandbox platformer directly from the web browser dashboard.</p>
+        
+        <a href="tobobs-engine://map=obby.json" class="play-btn">LAUNCH OBBY</a>
+        
+        <div class="footer-note">
+            Requires tobobs-launcher setup and Windows registry activation.
         </div>
     </div>
 
