@@ -3,83 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobobs Engine</title>
+    <title>Tobobs Engine Launcher</title>
     <style>
+        /* Sets the entire page background to clean white */
         body {
-            background-color: #222;
-            color: white;
-            font-family: sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
         }
 
-        /* Small, dedicated area for the game panel */
-        .game-panel {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 320px;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
-        }
-
         h1 {
-            margin-top: 0;
-            font-size: 24px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        /* Compact placeholder frame for your image */
-        .image-container {
-            width: 100%;
-            height: 180px;
-            background-color: #444;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+        p {
+            font-size: 1.1rem;
+            color: #666666;
+            margin-bottom: 30px;
         }
 
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .play-button {
-            display: inline-block;
+        /* Launcher Button Style */
+        .launch-btn {
             background-color: #ff5500;
-            color: white;
-            text-decoration: none;
-            padding: 12px 30px;
-            font-size: 18px;
+            color: #ffffff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.25rem;
             font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.2s;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .play-button:hover {
-            background-color: #d44400;
+        .launch-btn:hover {
+            background-color: #e04b00;
+        }
+
+        .launch-btn:active {
+            transform: scale(0.98);
         }
     </style>
 </head>
 <body>
 
-    <div class="game-panel">
-        <h1>Obby</h1>
-        
-        <div class="image-container">
-            <img src="obby.png" alt="Obby Preview" onerror="this.style.display='none'; this.parentNode.innerText='[ obby.png placeholder ]';">
-        </div>
+    <h1>Tobobs Engine</h1>
+    <p>Press the button below to boot the 3D sandbox engine locally.</p>
 
-        <a href="tobobs://obby" class="play-button">PLAY</a>
-    </div>
+    <a href="tobobs-engine://launch" class="launch-btn">PLAY NOW</a>
 
 </body>
 </html>
