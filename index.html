@@ -19,7 +19,6 @@
             display: flex;
             flex-direction: column;
         }
-        /* Preserved Navbar Style */
         .navbar {
             background: #ffffff;
             border-bottom: 1px solid #e0e0e0;
@@ -43,7 +42,6 @@
         .navbar-actions a:hover {
             text-decoration: underline;
         }
-        /* Main Viewport Workspace */
         .main-container {
             flex: 1;
             display: flex;
@@ -51,7 +49,6 @@
             justify-content: center;
             padding: 20px;
         }
-        /* Square Game Display Card */
         .game-square-card {
             background: #ffffff;
             width: 100%;
@@ -62,7 +59,6 @@
             padding: 30px;
             text-align: center;
         }
-        /* Geometric visual block representing the game artwork space */
         .game-art-placeholder {
             width: 120px;
             height: 120px;
@@ -89,7 +85,6 @@
             margin-bottom: 28px;
             line-height: 1.5;
         }
-        /* One Game, One Launch Protocol Link Button */
         .launch-btn {
             display: block;
             background-color: #0066cc;
@@ -125,7 +120,7 @@
             </div>
             <h2 class="game-title">Core Obby</h2>
             <p class="game-description">
-                Launch directly into the core obby instance. Fetches map geometry parameters from the remote server workspace.
+                Launch directly into the live instance. The HTML frontend dictates exactly which resource file is pulled.
             </p>
             <a href="tobobs-engine://map=obby.json" class="launch-btn">
                 Launch Obby Instance
