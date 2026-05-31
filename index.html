@@ -3,47 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobobs Engine Launcher</title>
+    <title>Tobobs Launch Portal</title>
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            background-color: #ffffff;
-            color: #222222;
-            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f4f6f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 5px; }
-        p { color: #666666; margin-bottom: 25px; }
-        
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            width: 100%;
+            max-width: 420px;
+            border: 1px solid #eaeaea;
+        }
+        h1 { font-size: 1.8rem; color: #111111; margin-bottom: 8px; font-weight: 700; }
+        p { color: #666666; font-size: 0.95rem; margin-bottom: 30px; }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; }
         .launch-btn {
-            background-color: #ff5500;
-            color: white;
-            border: none;
-            padding: 16px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
+            display: block;
+            background-color: #000000;
+            color: #ffffff;
             text-decoration: none;
-            box-shadow: 0 4px 10px rgba(255,85,0,0.3);
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
         }
-        .launch-btn:hover { background-color: #e04b00; }
+        .launch-btn:hover { background-color: #222222; transform: translateY(-1px); }
+        .launch-btn.secondary {
+            background-color: #ffffff;
+            color: #111111;
+            border: 1px solid #dddddd;
+        }
+        .launch-btn.secondary:hover { background-color: #f9f9f9; }
     </style>
 </head>
 <body>
 
-    <h1>Tobobs Engine</h1>
-    <p>Select a map configuration to send to the engine:</p>
-
-    <a href="tobobs-engine://map=lobby.json" class="launch-btn">LAUNCH LOBBY MAP</a>
-    
-    <br>
-    
-    <a href="tobobs-engine://map=expert_level.json" style="background-color: #333;" class="launch-btn">LAUNCH EXPERT MAP</a>
+    <div class="card">
+        <h1>Tobobs Launcher</h1>
+        <p>Select a map architecture to pass to the engine workspace.</p>
+        <div class="btn-group">
+            <a href="tobobs-engine://map=lobby.json" class="launch-btn">Load Core Lobby</a>
+            <a href="tobobs-engine://map=expert_level.json" class="launch-btn secondary">Load Expert Gauntlet</a>
+        </div>
+    </div>
 
 </body>
 </html>
