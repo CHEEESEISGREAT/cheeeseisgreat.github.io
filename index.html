@@ -2,60 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobobs Launch Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="tobobs.ico">
+    <title>Tobobs - Play Games</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
+            color: black;
+            font-family: Arial, sans-serif;
             background-color: #f4f6f9;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Preserved Navbar Style */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            width: 100%;
+        }
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+        .navbar-actions a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar-actions a:hover {
+            text-decoration: underline;
+        }
+        /* Main Viewport Workspace */
+        .main-container {
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            padding: 20px;
         }
-        .card {
+        /* Square Game Display Card */
+        .game-square-card {
             background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            text-align: center;
             width: 100%;
-            max-width: 420px;
+            max-width: 400px;
             border: 1px solid #eaeaea;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            text-align: center;
         }
-        h1 { font-size: 1.8rem; color: #111111; margin-bottom: 8px; font-weight: 700; }
-        p { color: #666666; font-size: 0.95rem; margin-bottom: 30px; }
-        .btn-group { display: flex; flex-direction: column; gap: 12px; }
+        /* Geometric visual block representing the game artwork space */
+        .game-art-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: #f0f2f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 16px;
+            margin: 0 auto 24px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .game-art-placeholder span {
+            font-size: 36px;
+        }
+        .game-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #111111;
+            margin-bottom: 8px;
+        }
+        .game-description {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+        /* One Game, One Launch Protocol Link Button */
         .launch-btn {
             display: block;
-            background-color: #000000;
-            color: #ffffff;
-            text-decoration: none;
+            background-color: #0066cc;
+            color: white;
             padding: 14px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.2s, transform 0.1s;
         }
-        .launch-btn:hover { background-color: #222222; transform: translateY(-1px); }
-        .launch-btn.secondary {
-            background-color: #ffffff;
-            color: #111111;
-            border: 1px solid #dddddd;
+        .launch-btn:hover {
+            background-color: #004c99;
         }
-        .launch-btn.secondary:hover { background-color: #f9f9f9; }
+        .launch-btn:active {
+            transform: scale(0.98);
+        }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Tobobs Launcher</h1>
-        <p>Select a map architecture to fetch from the GitHub repository.</p>
-        <div class="btn-group">
-            <a href="tobobs-engine://map=lobby.json" class="launch-btn">Load Remote Lobby</a>
-            <a href="tobobs-engine://map=expert_level.json" class="launch-btn secondary">Load Remote Expert Gauntlet</a>
+    <nav class="navbar">
+        <a class="navbar-logo" href="index.html">Tobobs</a>
+        <div class="navbar-actions">
+            <a href="https://www.youtube.com/channel/UC_kikknTWzwpXqa2keaiBtw" target="_blank">YouTube</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="game-square-card">
+            <div class="game-art-placeholder">
+                <span>🧱</span>
+            </div>
+            <h2 class="game-title">Core Obby</h2>
+            <p class="game-description">
+                Launch directly into the core obby instance. Fetches map geometry parameters from the remote server workspace.
+            </p>
+            <a href="tobobs-engine://map=obby.json" class="launch-btn">
+                Launch Obby Instance
+            </a>
         </div>
     </div>
 
